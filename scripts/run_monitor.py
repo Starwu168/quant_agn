@@ -1,11 +1,8 @@
-from common.config import MonitorSettings
-from monitor.monitor_loop import MonitorService
+﻿"""程序入口：启动盯盘服务并持续运行。"""
 
-# 创建配置
-settings = MonitorSettings()
+import os
 
-# 初始化 MonitorService
-svc = MonitorService(settings)
+from modules.dingpan.monitor_loop import MonitorService
 
-# 启动监控服务
+svc = MonitorService("C:/Users\wind2\PycharmProjects\quant_agn\pre\config\monitor.yaml")
 svc.run_forever()
